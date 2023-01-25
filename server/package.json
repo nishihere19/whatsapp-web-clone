@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for backend for the whatsapp web clone with react, redux, sockets and mongodb atlas",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js"
+  },
+  "keywords": [
+    "Whatsapp",
+    "chatapp",
+    "clone",
+    "web",
+    "react",
+    "redux",
+    "nodejs",
+    "mongodb",
+    "socket.io"
+  ],
+  "author": "NISHI AGRAWAL",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "querystring": "^0.2.0",
+    "random-token": "0.0.8",
+    "socket.io": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

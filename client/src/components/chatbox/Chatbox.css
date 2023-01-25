@@ -1,0 +1,45 @@
+.chatbox {
+    display: grid;
+    grid-template-areas: "navigation details" "navigation chat" "archive chat" "list chat" "list message";
+    grid-template-columns: 35% auto;
+    margin: 5vh 0px;
+    width: 1300px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.sendbutton{
+    height:48px !important;
+    width:48px !important;
+}
+
+.Sbutton{
+    border: none;
+}
+
+.chatbox .message-section {
+    grid-area: message;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius: 3px;
+    background-color: #f0efed;
+}
+
+.chatbox .message-section>svg {
+    flex: 0.1;
+    color: var(--icon-color);
+    font-size: 2rem;
+}
+
+.chatbox .message-section>.message-input {
+    flex: 0.9;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    outline: none;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+.Rbutton{
+    margin: 40px 40px 40px 40px;
+}

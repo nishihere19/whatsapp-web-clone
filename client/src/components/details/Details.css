@@ -1,0 +1,43 @@
+.chatbox>.details-section {
+    grid-area: details;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-right-radius: 3px;
+    background-color: #eeeeee;
+    border-left: 1px solid #e7e7e7;
+}
+
+.details-section .user {
+    display: grid;
+    grid-template-areas: "picture details";
+    grid-template-columns: 70px auto;
+    padding-left: 20px;
+}
+
+.details-section .user .profile-picture {
+    grid-area: picture;
+    height: var(--profile-picture-size);
+    width: var(--profile-picture-size);
+    border-radius: 50%;
+}
+
+.details-section .user .details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-section .user .details .name {
+    font-size: 1.2rem;
+}
+
+.details-section .user .details .last-seen {
+    color: rgb(100, 100, 100);
+}
+
+.details-section .actions>svg {
+    margin-right: 25px;
+    color: var(--icon-color);
+    font-size: 1.6rem;
+}

@@ -1,5 +1,9 @@
 # Whatsapp-web Clone
 
+![image](https://user-images.githubusercontent.com/63252119/214547963-7da82c57-a1e4-4302-84d2-38b6a5c8969e.png)
+![image](https://user-images.githubusercontent.com/63252119/214548091-86b3aa64-70ed-47d7-bc94-87778ebb33a4.png)
+
+
 ## :ribbon:Languages and Tools:
 
 ![NodeJS](https://img.shields.io/badge/nodejs%20-%ffb400.svg?&style=for-the-badge&logo=nodeJs&logoColor=white)

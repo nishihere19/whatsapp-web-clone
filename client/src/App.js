@@ -9,11 +9,11 @@ import { useSelector } from "react-redux"
 function App(){
     const archiveOpen = useSelector(state => state.archive.archiveOpen)
     // const userInfo = useSelector(state => state.user)
-    // const recipient = useSelector(state => state.user.recipient)
+    const value = useSelector(state => state.search.value)
     return(
     <Router>
         <Routes>
-            <Route exact path = "/" element = {<Chatbox archiveOpen={archiveOpen} />} />
+            <Route exact path = "/" element = {<Chatbox archiveOpen={archiveOpen} value={value} />} />
             <Route path = "/register" element = {<Register/>} />
             <Route path = "/login" element = {<Login/>} />
         </Routes>

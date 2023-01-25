@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import { useDispatch } from "react-redux";
 import { archiveActions } from "../../Library/archiveSlice"
 
-const URL = process.env.REACT_APP_BACKEND_URL;
 
 export default function Archive({archiveOpen}) {
   const[value,setValue] = useState("ARCHIVES");
@@ -28,7 +27,7 @@ export default function Archive({archiveOpen}) {
   return (
     <div className='archive-section'>
       <Button variant='contained' onClick={toggleArchive} className='MUIbutton' disableElevation>
-        <i class='fa-solid fa-box-archive'></i> {value}
+        <i className='fa-solid fa-box-archive'></i> {value}
       </Button>
     </div>
   );

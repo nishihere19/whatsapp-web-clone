@@ -36,7 +36,7 @@ const createMessage = async (sender, userToken, recipient, message) => {
                 _message.save()
                 _info = {
                     recipient: {email: _user.email, id: _user._id}, sender: {email: user.email, id: user._id},
-                    iv: encryptedMessage.iv, message: encryptedMessage.encryptedMessage, key: encryptedMessage.key
+                    iv: encryptedMessage.iv, message: encryptedMessage.encryptedMessage, key: encryptedMessage.key, timestamp: _message.createdAt
                 }
             }
         })

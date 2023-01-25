@@ -12,23 +12,22 @@ import {getAllUser,getAllArchives} from "../../Library/getAllUser";
 import queryString from "query-string";
 import io from "socket.io-client";
 import getUserById from "../../Library/getUserById";
-import crypto from "crypto-js";
 import SendMessageIcon from "@material-ui/icons/Message";
-import {useDispatch} from "react-redux";
-import {userActions} from "../../Library/userSlice"
+// import {useDispatch} from "react-redux";
+// import {userActions} from "../../Library/userSlice"
 
 let socket;
 const URL = process.env.REACT_APP_BACKEND_URL;
 
-const Chatbox = ({ location={},archiveOpen }) => {
-  const [navigationOpen, setNavigationOpen] = useState(false);
+const Chatbox = ({ location={},archiveOpen, value }) => {
+  // const [navigationOpen, setNavigationOpen] = useState(false);
   const [selectedContact, setSelectedContact] = useState("");
   const [users, setUsers] = useState([]);
   const [userInfo, setUserInfo] = useState({});
   const [target, setTarget] = useState("");
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   function onClickOnContact(contact) {
     setSelectedContact(contact);
@@ -104,7 +103,7 @@ const Chatbox = ({ location={},archiveOpen }) => {
     const token = new Cookies().get("token");
     getAllUser(token).then((result) => {
       getAllArchives().then((archives)=>{
-          if(archiveOpen==true){
+          if(archiveOpen===true){
             let users=[];
             archives.forEach(item=>{
               if(item.me===userInfo.email) users.push(item.them);
@@ -139,20 +138,10 @@ const Chatbox = ({ location={},archiveOpen }) => {
     setInputMessage("");
   };
 
-  useEffect(() => {
-    var checkExist = setInterval(function () {
-      if (document.querySelector("#messages")) {
-        document.querySelector("#messages").scrollTop =
-          document.querySelector("#messages").scrollHeight;
-        clearInterval(checkExist);
-      }
-    }, 100);
-  });
-
 
   return (
     <div className="app">
-    <div className={`chatbox ${(navigationOpen) ? 'chatbox-navigation-open' : 'chatbox-navigation-closed'}`}>
+    <div className={`chatbox ${false ? 'chatbox-navigation-open' : 'chatbox-navigation-closed'}`}>
       <Navigation/>
       <Archive archiveOpen={archiveOpen}/>
       <List onClick={onClickOnContact} contacts={users}/>

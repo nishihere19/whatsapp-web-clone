@@ -44,7 +44,7 @@ export default function Details({ contact, userInfo }) {
         </div>
       </div>
       <input className="message-input" placeholder="Type to search" value={inputSearch} onChange={({ target: { value } }) => setInputSearch(value)}/>
-      <div className='actions'>
+      <div className='actions-details'>
       <Button
           variant='contained'
           onClick={submitSearch}

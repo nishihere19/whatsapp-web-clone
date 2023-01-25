@@ -41,3 +41,17 @@
     color: var(--icon-color);
     font-size: 1.6rem;
 }
+.message-input{
+    flex: 0.7 1;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    outline: none;
+    font-size: 1rem;
+    font-family: Roboto;
+}
+
+.actions-details{
+    display:flex;
+    height:50px;
+}
